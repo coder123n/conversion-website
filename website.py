@@ -8,15 +8,9 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    country = request.args['color'] #get user's input for color input
-    if country == "America":
-        response = america
-    if counry == "Spain":
-        response = spain
-    if country == "Norway":
-      response = norway
-    if country == "England":
-      response = england
+    firstname = request.args['first name'] #get user's input for color input
+    lastname = request.args['last name'] #get user's input for color input
+    favoritecolor = request.args['color'] #get user's input for color input
     return render_template('response.html', responseFromServer = response)
     
     
