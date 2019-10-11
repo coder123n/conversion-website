@@ -11,6 +11,7 @@ def render_response():
     firstname = request.args['firstname'] #get user's input for color input
     lastname = request.args['lastname'] #get user's input for color input
     favoritecolor = request.args['favoritecolor'] #get user's input for color input
+    response = "Hello my name is 'firstname' 'lastname' and my favorite color is 'favoritecolor'."
     return render_template('response.html', responseFromServer = response)
     
     
