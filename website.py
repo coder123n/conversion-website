@@ -8,9 +8,9 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    firstname = request.args['first name'] #get user's input for color input
-    lastname = request.args['last name'] #get user's input for color input
-    favoritecolor = request.args['color'] #get user's input for color input
+    firstname = request.args['firstname'] #get user's input for color input
+    lastname = request.args['lastname'] #get user's input for color input
+    favoritecolor = request.args['favoritecolor'] #get user's input for color input
     return render_template('response.html', responseFromServer = response)
     
     
