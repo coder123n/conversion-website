@@ -6,7 +6,7 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     return render_template('home.html')
 
-@app.route("/")
+@app.route("/response")
 def render_response():
     firstname = request.args['first name'] #get user's input for color input
     lastname = request.args['last name'] #get user's input for color input
