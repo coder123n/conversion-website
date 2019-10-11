@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 2 meta tags should come first in the head; any other head content should come *after* these tags -->
+
+    <!-- Bootstrap -->
+
+    <!-- Latest compiled and minified bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <title>{% block title %}{% endblock %} - Conversion Website</title>
+  
+  </head>
+  <body>
+    <!--nav bar-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href=".">Convrsion Website</a>
+        </div>
+          <ul class="nav navbar-nav">
+            <li {% if active_page == "namecolor" %} class="active"{% endif %}><a href="colors.html">Colors</a></li>
+            <li {% if active_page == "money" %} class="active"{% endif %}><a href="money.html">Money</a></li> <!-- p1 will show up in the url -->
+            <li {% if active_page == "measurements" %} class="active"{% endif %}><a href="measurements.html"></a></li>
+          </ul>
+      </div>
+    </nav>
+    
+    <!--page content-->
+    {% block content %}{% endblock %}
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </body>
+</html>
