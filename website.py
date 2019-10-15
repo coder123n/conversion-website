@@ -5,9 +5,26 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 @app.route("/")
 def render_main():
     return render_template('colors.html')
+	
 
 @app.route("/response")
 def render_response():
+    firstname = request.args['firstname'] #get user's input for color input
+    lastname = request.args['lastname'] #get user's input for color input
+    favoritecolor = request.args['favoritecolor'] #get user's input for color input
+    response = "Hello my name is " + firstname + " " + lastname + " and my favorite color is " + favoritecolor + " ."
+    return render_template('response.html', responseFromServer = response)
+	
+@app.route("/money")
+def render_money():
+    firstname = request.args['firstname'] #get user's input for color input
+    lastname = request.args['lastname'] #get user's input for color input
+    favoritecolor = request.args['favoritecolor'] #get user's input for color input
+    response = "Hello my name is " + firstname + " " + lastname + " and my favorite color is " + favoritecolor + " ."
+    return render_template('response.html', responseFromServer = response)
+	
+@app.route("/measure")
+def render_measure():
     firstname = request.args['firstname'] #get user's input for color input
     lastname = request.args['lastname'] #get user's input for color input
     favoritecolor = request.args['favoritecolor'] #get user's input for color input

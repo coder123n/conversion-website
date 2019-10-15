@@ -19,12 +19,12 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=".">Convrsion Website</a>
+          <a class="navbar-brand" href=".">Conversion Website</a>
         </div>
           <ul class="nav navbar-nav">
-            <li {% if active_page == "namecolor" %} class="active"{% endif %}><a href="colors.html">Colors</a></li>
-            <li {% if active_page == "money" %} class="active"{% endif %}><a href="money.html">Money</a></li> <!-- p1 will show up in the url -->
-            <li {% if active_page == "measurements" %} class="active"{% endif %}><a href="measurements.html"></a></li>
+            <li {% if active_page == "colors" %} class="active"{% endif %}><a href="/">Colors</a></li>
+            <li {% if active_page == "money" %} class="active"{% endif %}><a href="/money">Money</a></li>
+            <li {% if active_page == "measurements" %} class="active"{% endif %}><a href="/measure">Measurements</a></li>
           </ul>
       </div>
     </nav>
