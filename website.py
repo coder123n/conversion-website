@@ -17,18 +17,21 @@ def render_response():
 	
 @app.route("/money")
 def render_money():
-    $ = request.args['$'] 
-    response = "$$" + firstname * 1.2
-    return render_template('response.html', responseFromServer = response)
+	if "dollars" in request.args:
+		dollars = request.args['dollars'] 
+		response = "$$" + dollars * 1.2
+		return render_template('response.html', responseFromServer = response)
+	else:
+		return render_template('money.html')
 	
 @app.route("/measure")
 def render_measure():
-    firstname = request.args['firstname'] #get user's input for color input
-    lastname = request.args['lastname'] #get user's input for color input
-    favoritecolor = request.args['favoritecolor'] #get user's input for color input
-    response = "Hello my name is " + firstname + " " + lastname + " and my favorite color is " + favoritecolor + " ."
-    return render_template('response.html', responseFromServer = response)
-    
+    if "measure" in request.args:
+	    inches = request.args['inches'] 
+	    response = "cm" + inches * 1.2
+	    return render_template('response.html', responseFromServer = response)
+    else:
+	    return render_template('measurements.html')
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
