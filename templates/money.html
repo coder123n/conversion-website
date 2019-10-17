@@ -2,11 +2,12 @@
 {% set active_page = "money" %}
 {% block title %} Convert Money {% endblock %}
 {% block content %}
-    <form action="/response">
+	<h1> Convert to Pesos</h1>
+    <form action="/money">
       dollars:<br>
-      <input type="text" name="$">
+      <input type="text" name="dollars">
       <br>
-      <form action="/action_page.php">
-      <input type="submit" value="Convert to Pesos">
+      <input type="submit" value="Convert">
     </form> 
 {% endblock %}
+
