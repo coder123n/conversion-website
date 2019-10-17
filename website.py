@@ -18,20 +18,21 @@ def render_response():
 @app.route("/money")
 def render_money():
 	if "dollars" in request.args:
-		dollars = request.args['dollars'] 
-		response = "$$" + dollars * 1.2
+		dollars = float(request.args['dollars'])
+		response = str(dollars * 9.19) + "kr"
 		return render_template('response.html', responseFromServer = response)
 	else:
 		return render_template('money.html')
 	
 @app.route("/measure")
 def render_measure():
-    if "measure" in request.args:
-	    inches = request.args['inches'] 
-	    response = "cm" + inches * 1.2
+    if "inches" in request.args:
+	    inches = float(request.args['inches'])
+	    response = str( inches * 2.54) + "centimeter"
 	    return render_template('response.html', responseFromServer = response)
     else:
 	    return render_template('measurements.html')
+    
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
